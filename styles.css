@@ -1,0 +1,88 @@
+body{/*dette bestemer hvordan bakgrunnen skal se ut*/
+        background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background.jpg); /*linear-gradient gjør det så bakgrunnen er litt mørkere enn vanglig, url er hvilket bilde som skal brukes*/
+        background-size: cover;/*cover gjør det sånn at bakgrunnen beholder same form men blir dratt ut til å passe maskinens størrelse*/
+        background-position: center;/*center posisjon hjelper cover ved at man ser mitten av bilde isteden for ventre siden*/
+}
+
+.content{/*.content lager en style man kan bruke på en eller flere linjer, man bruker det isteden for å skrive style inni <>*/
+        font-family: sans-serif;/*dette setter fonten på alt teksten inni content div til sans serif*/
+        text-align: center;/*dette setter all teksten til midten av skjermen eller boksen den er inni*/
+        color: #fff;/*dette byter farge på teksten så den er enklere å lese på den mørke bakgrunnen*/
+}
+.content h1{/*.content h1 gjør det sånn at all tekst som er <h1> har denne stylen*/
+        font-size: 7vw;/*dette setter størrelsen på <h1> teksten, 7vw gjør det sånn at teksten byter størrelse med vinduet*/
+}
+.content h2{/*dette gjør det samme som .content h1*/
+        font-size: 3vw;
+        margin-top: 3vw;/*margin er hvor lang unna item er item over eller topen av siden, men vis item over er float så gjelder det ikke på det item*/
+        margin-bottom: -5vw;/*dette er det samme som top, men for bunnen. jeg tokk -5vw fordi normalt er tekst avstanden på teksten under for langt*/
+}
+
+button {/*dette bestemmer stylen på knappene*/
+        width: 25vw;/*dette er hvor bred knappen er i forhold til vinduet*/
+        height: 4vw;/*dette er det samme som width bare i høyde*/
+        text-align: center;
+        font-size: 1vw;
+        margin: 3vw 5vw;
+        border-radius: 25px;/*dette gjør så kantene på knappen er runde*/
+        font-weight: bold;/*dette gjør teksten bold. font weight er hvor tung teksten er, jo tungere jo sjukere tekste*/
+        border: 2px solid #ff2e2e;/*dette er hvor sjukk borderen er og hvilken farge den er*/
+        background: transparent;/*dette gjør så man kan se gjennom kanppen uten om borderen*/
+        color: #fff;/*dette gjør teksten inni knappen hvit*/
+        cursor: pointer;/*dette gjør sånn når pekkeren til musen er over knappen kjører den animationen*/
+        position: relative;
+        overflow: hidden;/*dette gjør så vis det er tekst utenfor knappen vil det bli usynlig*/
+}
+button:hover span {/*dette gjør sånn når mus pekkeren er over knappen fylles den med farge, jobber med cursor: pointer;*/
+        width: 100%;
+}
+span {/*dette bestemmer stylen på knappene etter at mus pekkeren er over den, width: 0; gjør sånn at den ikke er farge, men med koden over gjør det sånn at den dekker hele knappen*/
+        background: #ff2e2e;
+        height: 100%;
+        width: 0;
+        border-radius: 25px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;/*dette gjør at fargen er bak teksten, uten dette vil knappen ikke ha tekst etter animasjonen*/
+        transition: 0.5s;/*dette er hvor lang tid animasjonen vil vare*/
+}
+
+.info{/*dette er en <div> som bestemmer stylen på infoe*/
+        margin-top: 5vw;
+        margin-left: 17%;
+        margin-right: 17%;
+        background-color: #00000055;/*dette gir teksten en tinted bakgrunn for at den skal være enklere å lese*/
+        border-radius: 25px;
+}
+.info h2{/*dette er stylen til alle <h2> tekstene innenfor div info*/
+        font-size: 4vw;
+        margin-bottom: -2vw;
+}
+.info p{/*dette er det samme som .info h2, men bare for <p>*/
+        font-size: 1.3vw;
+        margin-top: 3vw;
+}
+
+table {/*dette bestemmer stylen til <table>*/
+        border-collapse: collapse;/*borde-collapse: collapse; gjør sånn at isteden for at det er borders rundt hele <table> er det kun under*/
+        width: 100%;
+}
+      
+th, td {/*dette bestemmer stylen på <th> og <td>, som kun finnes i en table*/
+        font-size: 2vw;
+        color: #fff;
+        padding: 8px;/*dette gjør nesten det samme som margin, men isteden for hele item er det kun teksten*/
+        text-align: left;
+        border-bottom: 1px solid #DDD;/*dette bestemmer stylen til borderen*/
+}
+      
+tr:hover {/*dette gjør sånn når man hoverer over <tr> byter den style*/
+        background-color: #ff2e2e;
+        text-decoration: underline;
+        text-decoration-color: #fff;
+}
+.loadout{/*dette er som .info h2, men det er kun for overskriften "gadgets"*/
+        font-size: 2vw;
+        margin-bottom: -3vw;
+}
